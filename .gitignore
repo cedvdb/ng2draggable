@@ -3,13 +3,12 @@ node_modules
 npm-debug.log
 package.json
 .npmignore
-.gitignore
 
-# OS generated files
-Thumbs.db
-.DS_Store
+
+
 
 # Ignored files
+tsconfig.json
 *.js
 *.map
 *.d.ts

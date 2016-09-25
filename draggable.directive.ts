@@ -20,7 +20,7 @@ export class Draggable implements OnInit, OnDestroy {
       this.mousedown = Observable.fromEvent<MouseEvent>(element.nativeElement, 'mousedown');
       // change css
       this.element.nativeElement.style.position = 'relative';
-      this.element.nativeElement.className += ' cursor-grabbable';
+      this.element.nativeElement.className += ' cursor-draggable';
 
       this.mousedrag = this.mousedown.map((event:MouseEvent):Position => {
 
