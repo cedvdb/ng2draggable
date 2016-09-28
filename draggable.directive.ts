@@ -2,7 +2,7 @@
 import { Directive, Input, ElementRef, HostListener, Renderer, OnInit} from '@angular/core';
 
 @Directive({
-  selector: '[n2-draggable]'
+  selector: '[ng2-draggable]'
 })
 export class Draggable implements OnInit{
 
@@ -41,8 +41,8 @@ export class Draggable implements OnInit{
       }
     }
 
-    @Input('n2-draggable')
-    set allowDrag(value){
+    @Input('ng2-draggable')
+    set allowDrag(value:boolean){
       this._allowDrag = value;
       if(this._allowDrag)
         this.element.nativeElement.className += ' cursor-draggable';

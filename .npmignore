@@ -1,6 +1,10 @@
 # Node generated files
 node_modules
 npm-debug.log
+readme.md
+.git
+.gitignore
+.npmignore
 
 # Ignored files
 *.ts
