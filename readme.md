@@ -43,6 +43,12 @@ import { Draggable } from 'ng2draggable/draggable.directive';
 
 That's it! now your component can be moved around.
 
+You can disable it as well :
+
+```
+<div [n2-draggable]="boolean"></div>
+```
+
 The component will have a custom class added to it as well: `cursor-draggable`.
 You can then use that css to costumize it :
 
@@ -60,7 +66,8 @@ You can then use that css to costumize it :
     cursor: -webkit-grabbing;
 }
 ```
-
+When the boolean input is false (it is true by default) the class is removed and
+the component is no longer moveable.
 
 ## Images
 
