@@ -1,7 +1,10 @@
 # Node generated files
 node_modules
 npm-debug.log
+<<<<<<< HEAD
 package.json
+=======
+>>>>>>> publishBranch
 readme.md
 .git
 .gitignore

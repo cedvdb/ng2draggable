@@ -1,6 +1,6 @@
 ### draggable
 
-[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.0.3&x2=0)](http://badge.fury.io/js/badge-list)
+[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.1.0&x2=0)](http://badge.fury.io/js/badge-list)
 [![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/shields_badge.svg)](https://semaphoreapp.com/boennemann/badges)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
@@ -38,7 +38,7 @@ import { Draggable } from 'ng2draggable/draggable.directive';
 ## Usage
 
 ```
-<div n2-draggable></div>
+<div ng2-draggable></div>
 ```
 
 That's it! now your component can be moved around.
@@ -46,7 +46,7 @@ That's it! now your component can be moved around.
 You can disable it as well :
 
 ```
-<div [n2-draggable]="boolean"></div>
+<div [ng2-draggable]="boolean"></div>
 ```
 
 The component will have a custom class added to it as well: `cursor-draggable`.
