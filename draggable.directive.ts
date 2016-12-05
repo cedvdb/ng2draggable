@@ -5,7 +5,6 @@ import { Directive, Input, ElementRef, HostListener, Renderer, OnInit} from '@an
   selector: '[ng2-draggable]'
 })
 export class Draggable implements OnInit{
-
     topStart:number=0;
     leftStart:number=0;
     _allowDrag:boolean = true;
@@ -31,11 +30,11 @@ export class Draggable implements OnInit{
         }
 
         @HostListener('document:mouseup')
-        onMouseUp() {
+        onMouseUp(event:MouseEvent) {
           this.md = false;
         }
 
-        @HostListener('mousemove', ['$event'])
+        @HostListener('document:mousemove', ['$event'])
         onMouseMove(event:MouseEvent) {
           if(this.md && this._allowDrag){
             this.element.nativeElement.style.top = (event.clientY - this.topStart) + 'px';
@@ -56,7 +55,7 @@ export class Draggable implements OnInit{
           this.md = false;
         }
 
-        @HostListener('touchmove', ['$event'])
+        @HostListener('document:touchmove', ['$event'])
         onTouchMove(event:TouchEvent) {
           if(this.md && this._allowDrag){
             this.element.nativeElement.style.top = ( event.changedTouches[0].clientY - this.topStart ) + 'px';
@@ -65,13 +64,13 @@ export class Draggable implements OnInit{
           event.stopPropagation();
         }
 
-    @Input('ng2-draggable')
-    set allowDrag(value:boolean){
-      this._allowDrag = value;
-      if(this._allowDrag)
-        this.element.nativeElement.className += ' cursor-draggable';
-      else
-        this.element.nativeElement.className = this.element.nativeElement.className
-                                                .replace(' cursor-draggable','');
-    }
+        @Input('ng2-draggable')
+        set allowDrag(value:boolean){
+          this._allowDrag = value;
+          if(this._allowDrag)
+            this.element.nativeElement.className += ' cursor-draggable';
+          else
+            this.element.nativeElement.className = this.element.nativeElement.className
+                                                    .replace(' cursor-draggable','');
+        }
 }
