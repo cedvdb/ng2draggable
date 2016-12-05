@@ -14,16 +14,17 @@ export class Draggable implements OnInit{
     constructor(public element: ElementRef) {}
 
         ngOnInit(){
-          //css changes
+          // css changes
           if(this._allowDrag){
             this.element.nativeElement.style.position = 'relative';
             this.element.nativeElement.className += ' cursor-draggable';
           }
         }
 
-
         @HostListener('mousedown', ['$event'])
         onMouseDown(event:MouseEvent) {
+          if(event.button === 2)
+            return; // prevents right click drag, remove his if you don't want it
           this.md = true;
           this.topStart = event.clientY - this.element.nativeElement.style.top.replace('px','');
           this.leftStart = event.clientX - this.element.nativeElement.style.left.replace('px','');
@@ -58,8 +59,8 @@ export class Draggable implements OnInit{
         @HostListener('touchmove', ['$event'])
         onTouchMove(event:TouchEvent) {
           if(this.md && this._allowDrag){
-            this.element.nativeElement.style.top = (event.changedTouches[0].clientY - this.topStart) + 'px';
-            this.element.nativeElement.style.left = (event.changedTouches[0].clientX - this.leftStart) + 'px';
+            this.element.nativeElement.style.top = ( event.changedTouches[0].clientY - this.topStart ) + 'px';
+            this.element.nativeElement.style.left = ( event.changedTouches[0].clientX - this.leftStart ) + 'px';
           }
           event.stopPropagation();
         }
