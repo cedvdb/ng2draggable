@@ -1,6 +1,6 @@
 ### draggable
 
-[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.1.1&x2=0)](http://badge.fury.io/js/badge-list)
+[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.2.2n&x2=0)](http://badge.fury.io/js/badge-list)
 [![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/shields_badge.svg)](https://semaphoreapp.com/boennemann/badges)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
