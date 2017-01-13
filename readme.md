@@ -22,7 +22,7 @@ In any case you need to add the directive to your module.
 ## Usage
 
 ```
-<div ng2-draggable [ng2-draggable]="true"></div>
+<div [ng2-draggable]="true"></div>
 ```
 
 That's it! now your component can be moved around.
