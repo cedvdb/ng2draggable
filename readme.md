@@ -1,6 +1,5 @@
 ### draggable
 
-[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=1.2.5n&x2=0)](http://badge.fury.io/js/badge-list)
 [![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/shields_badge.svg)](https://semaphoreapp.com/boennemann/badges)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
@@ -15,25 +14,10 @@ and drop as this is used to drag a div around. [Live steve demo](https://cedvdb.
 
 ## Install
 
-You can use either npm or you can just copy draggable.directive.ts file content.
+Just copy draggable.directive.ts file content in a directive.
 
-**NPM**
-
-```
-  npm install ng2draggable
-```
 
 In any case you need to add the directive to your module.
-
-```
-import { Draggable } from 'ng2draggable/draggable.directive';
-
-@NgModule({
-  declarations: [
-    ...,
-    Draggable
-  ],...})
-```
 
 ## Usage
 
