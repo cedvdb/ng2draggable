@@ -25,6 +25,17 @@ Or just copy draggable.directive.ts file content in a directive.
 
 In any case you need to add the directive to your module.
 
+```
+import { Draggable } from 'ng2draggable/draggable.directive';
+ 
+@NgModule({
+  declarations: [
+    ...,
+    Draggable
+  ],...})
+  
+  ```
+
 ## Usage
 
 ```
@@ -56,7 +67,7 @@ You can then use that css to costumize it :
     cursor: -webkit-grabbing;
 }
 ```
-When the boolean input is false (it is true by default) the class is removed and
+When the boolean input is false the class is removed and
 the component is no longer moveable.
 
 ## Images
