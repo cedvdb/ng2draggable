@@ -14,7 +14,13 @@ and drop as this is used to drag a div around. [Live steve demo](https://cedvdb.
 
 ## Install
 
-Just copy draggable.directive.ts file content in a directive.
+https://www.npmjs.com/package/ng2draggable
+
+```
+  npm install ng2draggable
+```
+
+Or just copy draggable.directive.ts file content in a directive.
 
 
 In any case you need to add the directive to your module.
@@ -30,7 +36,7 @@ That's it! now your component can be moved around.
 You can disable it as well :
 
 ```
-<div [ng2-draggable]="boolean"></div>
+<div [ng2-draggable]="false"></div>
 ```
 
 The component will have a custom class added to it as well: `cursor-draggable`.
