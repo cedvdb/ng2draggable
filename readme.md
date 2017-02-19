@@ -70,6 +70,21 @@ You can then use that css to costumize it :
 When the boolean input is false the class is removed and
 the component is no longer moveable.
 
+## Drag element with child element
+
+The element that triggers the dragging can be specified by using `ng2DraggableTarget`. In the example below the element dragging is controlled by clicking and dragging on the element `elementreference`.
+
+```html
+<div [ng2-draggable]=true [ng2DraggableTarget]="elementreference">
+    <div draggable="false" #elementreference>
+        Clicking and dragging this drags the parent element.
+    </div>
+    <div>
+        Clicking and dragging this does not drag the parent element.
+    </div>
+</div>
+```
+
 ## Images
 
 If there is an image in the children of the dragged component, make sure to add the HTML5 property

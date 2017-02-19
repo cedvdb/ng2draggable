@@ -10,6 +10,8 @@ export class Draggable implements OnInit{
     _allowDrag:boolean = true;
     md:boolean;
 
+    @Input() ng2DraggableTarget: HTMLElement;
+
     constructor(public element: ElementRef) {}
 
         ngOnInit(){
@@ -22,7 +24,7 @@ export class Draggable implements OnInit{
 
         @HostListener('mousedown', ['$event'])
         onMouseDown(event:MouseEvent) {
-          if(event.button === 2)
+          if(event.button === 2 || (typeof this.ng2DraggableTarget != 'undefined' && event.target != this.ng2DraggableTarget))
             return; // prevents right click drag, remove his if you don't want it
           this.md = true;
           this.topStart = event.clientY - this.element.nativeElement.style.top.replace('px','');
