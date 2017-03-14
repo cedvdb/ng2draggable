@@ -1,0 +1,1 @@
+.cube{background:orange;left:500px;top:40px}.cube,.cube2{width:15rem;height:15rem}.cube2{background:purple}.handle{background:#00bfff;height:2rem}.cube.cursor-draggable,.handle{cursor:grab;cursor:-webkit-grab}.cube.cursor-draggable:active,handle:active{cursor:grabbing;cursor:-webkit-grabbing}
