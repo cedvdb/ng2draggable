@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div class="cube"  [ng2-draggable]="true" style="top:60px;left:400px;">
+  Drag me Around
+</div>
+
+
+<div class="cube2" [ng2-draggable]="true" [ng2DraggableHandle]="elementreference">
+  <div class="handle" #elementreference></div>
+  Drag me Around with the handle
+</div>

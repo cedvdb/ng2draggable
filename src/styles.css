@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.cube{
+	background: orange;
+	width: 15rem;
+	height: 15rem;
+	left:500px;
+	top: 40px;
+}
+
+.cube2{
+	background: purple;
+	width: 15rem;
+	height: 15rem;
+
+}
+
+.handle{
+	background:deepskyblue;
+	height: 2rem;
+}
+
+
+
+/* Applies a grabbing hand on top of the div that's draggable*/
+.cube.cursor-draggable, .handle {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+ /*  Apply a "closed-hand" cursor during drag operation. */
+.cube.cursor-draggable:active, handle:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
